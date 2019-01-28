@@ -49,13 +49,7 @@ __printf(char* message,...)
  */
 int main(int argc, char*argv[])
 {
-  int i;
-  int aopt = 0;
-  int bopt = 0;
-  int copt = 0;
-  int dopt = 0;
-  char *cparam = NULL;
-  char *dparam = NULL;
+  char *param = NULL;
   int opt;
 
   check_debug_option();
