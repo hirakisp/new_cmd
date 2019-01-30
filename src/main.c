@@ -15,8 +15,8 @@ static int debug_option = 0;
 static void 
 check_debug_option(void)
 {
-  const char *debug;
-  debug = getenv("MY_XXX_DEBUG");
+	const char *debug;
+	debug = getenv("MY_XXX_DEBUG");
 	if (debug && (strstr(debug, "xxx") || strstr(debug, "1")))
 		debug_option = 1;
 }
@@ -30,18 +30,18 @@ __printf(char* message,...)
 	struct timespec tp;
 	unsigned int time;
 
-  va_list ap;
+	va_list ap;
  
-  if (debug_option) {
-	  clock_gettime(CLOCK_REALTIME, &tp);
-	  time = (tp.tv_sec * 1000000L) + (tp.tv_nsec / 1000);
+	if (debug_option) {
+		clock_gettime(CLOCK_REALTIME, &tp);
+		time = (tp.tv_sec * 1000000L) + (tp.tv_nsec / 1000);
 
-    va_start(ap, message);
-	  fprintf(stderr, "[%10.3f] ", time / 1000.0);
-    vfprintf(stderr, message, ap)
-	  fprintf(stderr, ")\n");
-    va_end(ap);
-  }
+		va_start(ap, message);
+		fprintf(stderr, "[%10.3f] ", time / 1000.0);
+		vfprintf(stderr, message, ap);
+		fprintf(stderr, ")\n");
+		va_end(ap);
+	}
 }
 
 /*
