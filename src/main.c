@@ -39,7 +39,6 @@ __printf(char* message,...)
 		va_start(ap, message);
 		fprintf(stderr, "[%10.3f] ", time / 1000.0);
 		vfprintf(stderr, message, ap);
-		fprintf(stderr, ")\n");
 		va_end(ap);
 	}
 }
