@@ -35,5 +35,7 @@ int main(int argc, char*argv[])
 		}
 	}
 
+	__printf("test\n");
+
 	return 0;
 }
