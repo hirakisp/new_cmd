@@ -1,4 +1,10 @@
 
+#ifdef __linux
+#define __printf __printf_linux
 extern void check_debug_option(void);
-extern void __printf(char* message,...);
+#else
+//#else if defined(__WIN32) || defined(__WIN64)
+#define __printf __printf_win
+extern void check_debug_option(void);
+#endif
 

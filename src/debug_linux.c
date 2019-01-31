@@ -50,7 +50,7 @@ __printf(char* message,...)
 	time = (tp.tv_sec * 1000000L) + (tp.tv_nsec / 1000);
 
 	va_start(ap, message);
-	fprintf(stderr, "[%10.3f] ", time / 1000.0);
+	fprintf(stderr, "[%05d] [%10.3f] ", gettid(), time / 1000.0);
 	vfprintf(stderr, message, ap);
 	va_end(ap);
 
