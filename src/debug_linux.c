@@ -37,7 +37,7 @@ check_debug_option(void)
  * This function is print log to stderr or stdoutput.
  */
 void
-__printf_ln(char* message,...)
+__printf(char* message,...)
 {
 	struct timespec tp;
 	unsigned int time;

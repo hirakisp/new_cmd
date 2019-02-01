@@ -20,7 +20,7 @@ check_debug_option(void)
  * This function is print log to stderr or stdoutput.
  */
 void
-__printf_win(char* message,...)
+__printf(char* message,...)
 {
 	va_list ap;
 	va_start(ap, message);
