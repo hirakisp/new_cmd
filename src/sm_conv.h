@@ -1,4 +1,13 @@
+/**
+sm_conv
+state machine converter
 
+ support input format
+  - plantUML
+
+ support output format
+  - C
+*/
 #typedef EVENT_ID uint_16;
 
 struct event {
