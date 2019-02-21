@@ -23,7 +23,7 @@ all:$(TARGET)
 
 $(TARGET):$(OBJS)
 	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@ $(LIBS)
+	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@ $(LIBS) $(INCLUDE)
 
 $(OBJ_ROOT)/%.o: %.c
 	@mkdir -p $(dir $@)
