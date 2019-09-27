@@ -1,9 +1,4 @@
-# Pantanal
+# Sandbox
 
-Pantanal is template of new command for myself.I make it by myself. I will expand the functions I want.
+This is my sandbox.
 
-  ```plantuml
-  Bob -> Alice : hello
-  Alice -> Bob : Go Away
-  ```
-  
